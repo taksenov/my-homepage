@@ -61,12 +61,18 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title="@taksenov"
       description="Персональная страница программиста: Аксенова Тимофея taksenov@gmail.com">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
+
+          <p className={styles.forOfferContacts}>
+            Если Вы хотите пригласить меня на работу, в Вашу великолепнейшую компанию. 
+            Прошу воспользоваться разделом <strong>Контакты</strong>, который расположен внизу страницы.
+          </p>
+
           <div className={styles.buttons}>
             <Link
               className={classnames(

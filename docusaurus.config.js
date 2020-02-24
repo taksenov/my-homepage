@@ -79,7 +79,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} taksenov@gmail.com. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} taksenov@gmail.com. Built with ❤ and Docusaurus.`,
     },
   },
   presets: [
