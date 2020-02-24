@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://taksenov.github.io/',
   baseUrl: '/my-homepage/',
   favicon: 'img/favicon.ico',
-  organizationName: 'taksenov@gmail.com', // Usually your GitHub org/user name.
+  organizationName: 'taksenov', // Usually your GitHub org/user name.
   projectName: 'my-homepage', // Usually your repo name.
   themeConfig: {
     navbar: {
