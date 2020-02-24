@@ -1,23 +1,24 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  title: 'Аксенов Тимофей',
+  tagline: '<irony>Заслуженный фронтенд разработчик России, с макбуком и бородой</irony>',
+  url: 'https://taksenov.github.io/',
+  baseUrl: '/my-homepage/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'taksenov@gmail.com', // Usually your GitHub org/user name.
+  projectName: 'my-homepage', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Персональная страница',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Logo',
         src: 'img/logo.svg',
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'docs/doc1', label: 'Наработки', position: 'left'},
+        {to: 'blog', label: 'Блог', position: 'left'},
+        {to: 'docs/mdx', label: 'Книги', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/taksenov',
           label: 'GitHub',
           position: 'right',
         },
@@ -27,50 +28,58 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Знания',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Наработки',
               to: 'docs/doc1',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'Social',
-          items: [
-            {
-              label: 'Blog',
+              label: 'Блог',
               to: 'blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Книги',
+              to: 'docs/mdx',
+            },
+          ],
+        },
+        {
+          title: 'Контакты',
+          items: [
+            {
+              label: 'Телеграм',
+              href: 'https://t.me/taksenov',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Телефон',
+              href: 'tel:+79222049227',
+            },
+            {
+              label: 'Скайп',
+              href: 'skype:capitanbarboz',
+            },
+            {
+              label: 'Электропочта',
+              href: 'mailto:taksenov@gmail.com',
+            },
+          ],
+        },
+        {
+          title: 'Соц. сети',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/taksenov',
+            },
+            {
+              label: 'Хабр Карьера',
+              href: 'https://career.habr.com/dustikreal',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} taksenov@gmail.com. Built with Docusaurus.`,
     },
   },
   presets: [
