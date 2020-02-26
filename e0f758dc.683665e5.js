@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{112:function(a){a.exports=JSON.parse('{"allTagsPath":"/my-homepage/blog/tags","slug":"dan-abramov","name":"dan abramov","count":1,"permalink":"/my-homepage/blog/tags/dan-abramov"}')}}]);
