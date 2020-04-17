@@ -65,8 +65,8 @@ function Home() {
       description="Персональная страница программиста: Аксенова Тимофея taksenov@gmail.com">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className={classnames('hero__title', styles.heroTextColor)}>{siteConfig.title}</h1>
+          <p className={classnames('hero__subtitle', styles.heroTextColor)}>{siteConfig.tagline}</p>
 
           <p className={styles.forOfferContacts}>
             Если Вы хотите пригласить меня на работу, в Вашу великолепнейшую компанию. 

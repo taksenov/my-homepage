@@ -30,8 +30,12 @@
 }
 
 /* Custom Styles */
+.heroTextColor {
+  color: #ffffff;
+}
+
 .forOfferContacts {
-  
+  color: #ffffff;
 }
 
 /* Media Queries */
