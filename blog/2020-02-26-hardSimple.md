@@ -1,6 +1,6 @@
 ---
 id: hardSimple
-title: Не простой выбор для простого решения
+title: Непростой выбор для простого решения
 author: Timofey Aksenov
 author_title: Front End Developer
 author_url: https://github.com/taksenov
