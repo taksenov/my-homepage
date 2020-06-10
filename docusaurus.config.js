@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Аксенов Тимофей',
-  tagline: '<irony>Заслуженный фронтенд разработчик России, с макбуком и бородой</irony>',
+  tagline:
+    '<irony>Заслуженный фронтенд разработчик России, с макбуком и бородой</irony>',
   url: 'https://taksenov.github.io/',
   baseUrl: '/my-homepage/',
   favicon: 'img/favicon.ico',
@@ -14,9 +15,9 @@ module.exports = {
         src: 'img/logo.svg',
       },
       links: [
-        {to: 'docs/doc1', label: 'Наработки', position: 'left'},
-        {to: 'blog', label: 'Блог', position: 'left'},
-        {to: 'docs/mdx', label: 'Книги', position: 'left'},
+        { to: 'docs/doc1', label: 'Наработки', position: 'left' },
+        { to: 'blog', label: 'Блог', position: 'left' },
+        { to: 'docs/mdx', label: 'Книги', position: 'left' },
         {
           href: 'https://github.com/taksenov',
           label: 'GitHub',
