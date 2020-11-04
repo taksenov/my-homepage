@@ -5,12 +5,22 @@ author: Timofey Aksenov
 author_title: Front End Developer
 author_url: https://github.com/taksenov
 author_image_url: https://avatars3.githubusercontent.com/u/4538701?s=400&v=4
-tags: [go, golang, programming, redux-saga, channel, javascript, typescript]
+tags:
+  [
+    lodash,
+    go,
+    golang,
+    programming,
+    redux-saga,
+    channel,
+    javascript,
+    typescript,
+    either monad,
+    functional programming,
+    contracts,
+    contracts programming,
+  ]
 ---
-
-:::note
-This is WIP blog article
-:::
 
 Работал я как-то свою работу на работе: "рисовал кнопочки на реакте" и вдруг бах! Тимлид мне говорит:
 
@@ -18,17 +28,27 @@ This is WIP blog article
 
 Делать нечего, нужно сделать.
 
-В процессе первоначального мозгового штурма, я вспомнил, что в документации к `redux-saga` читал про `eventChannels` и там был пример создания канала для web sockets на основе `socket.io client`. Изучив этот пример из документации, я понял, что это то что мне нужно. Но нужно доработать свой код, чтобы учесть технологические требования:
+Когда я учился на курсах по `Golang`, а да если вы не в курсе, то я прошел курсы на степике и успешно их сдал на максимальный балл.
 
-1. Возможность подключения к различным физическим серверам web sockets (оборачивание каждого в отдельный канал)
-1. Возможность подключения к различным каналам внутри одного физического сервера web sockets (оборачивание каждого в отдельный канал)
+[Разработка веб-сервисов на Go - основы языка / Результат 100%](https://stepik.org/cert/288192)
+
+[Разработка веб-сервисов на Golang, часть 2 / Результат 100%](https://stepik.org/cert/371396)
+
+В общем на этих курсах изучая, как работают горутины и пишутся микросервисы, я узнал про каналы, успешно реализовал их в ДЗ и запомнил, что каналы вещь нужная и полезная.
+
+И вот в процессе первоначального мозгового штурма, я вспомнил, что в документации к `redux-saga` читал про `eventChannels` и там был пример создания канала для web sockets на основе `socket.io client`. О да, если бы не курсы по гошечке, то я бы эту часть документации пропустил и пошел дальше экшенами в стор пуляться... ой "рисовать кнопочки на реакте" конечно же.
+
+Изучив пример из документации `redux-saga`, я понял, что `eventChannels` это то что мне нужно. Но нужно доработать свой код, чтобы учесть технологические требования:
+
+1. Подключение к различным физическим серверам web sockets (оборачивание каждого в отдельный канал)
+1. Подключение к различным каналам внутри одного физического сервера web sockets (оборачивание каждого в отдельный канал)
 1. Независимый запуск каналов
 1. Независимая остановка каналов
 1. Возможность провести инвентаризацию активных каналов
 
-В процессе написания, мне очень хорошо запомнился один момент, а именно: установка бейджика со статусом для коробки, паллеты, партии с готовой продукцией. Один и тот же объект в бизнес-логике складского учета может иметь различные статусы, которые отображаются в таблице с итоговыми выборками. С бекенда я получал только статусы в виде строк `IN_PARTY` и номера этих самых партий, которые преобразовывал в человекочитаемый вид. Например: `В коробке`, `В партии`, `В партии: №2`, `В паллете`, `В паллете: №6`.
+**Реализация задуманного:**
 
-**Код первоначальной версии:**
+В файле `chanSaga.ts` я создал 5 функций, которые обладают следущей функциональностью:
 
 ```ts
 /**
@@ -51,6 +71,7 @@ export function createSocketChannel({
   return eventChannel((emit: any) => {
     socket.setToken(token);
 
+    // NB: Обратите внимание на строку кода `outerCallback({ message, emit });` будет бонус
     const publishHandlerFunction = (message: any) => {
       outerCallback({ message, emit });
     };
@@ -181,4 +202,84 @@ export function* watchSocketChan(chanName: any) {
     }
   }
 }
+```
+
+**Практическая реализация задуманного:**
+
+После того, как я реализовал всю необходимую инфраструктуру в файле `chanSaga.ts`, теперь я могу в любом месте системы делать вот так:
+
+```ts
+// Выберем нужный сокет канал
+const scktSelector: any = yield select(socketSelector);
+
+// Прервем его, если он вдруг остался запущен,
+yield call(terminateSocketChan, SUPPORT_MESSAGES_CHAN);
+
+yield put({
+  type: socketSaveSocket.toString(),
+  payload: {},
+});
+
+// Создадим сокет
+const socket = yield call(createSocketConnection, data);
+
+// Создадим канал для сокета
+// NB: Обратите внимание на строку кода `outerCallback: chatListSupportSocketCallback,` будет бонус
+const channel = yield call(createSocketChannel, {
+  data,
+  socket,
+  outerCallback: chatListSupportSocketCallback,
+});
+
+yield put({
+  type: socketSaveSocket.toString(),
+  payload: {
+    ...scktSelector,
+    [SUPPORT_MESSAGES_CHAN]: socket,
+  },
+});
+
+// Запустим вотчер, принимающий сообщения в канал от внешнего web socket сервера
+yield call(watchSocketChan, channel);
+```
+
+Код выше, может быть многократно продублирован, что позволит реализовать все поставленные нам функциональные требования.
+
+**Бонус про зубодробительный пример с замыканием:**
+
+```ts
+/**
+ * Коллбек, который помещается в event канал с сокетами,
+ * где при событии от сокет сервера `publish`
+ * "вытягивает" emit (эмиттер) в замыкание.
+ * Эмиттер (emit) это аргумент коллбека из функции `eventChannel` пакета redux-saga:
+ *
+ * `eventChannel((emit: any) => {...}`
+ *
+ * Эмиттер нужен, чтобы потом "дернуть" экшен и передать в его `payload`
+ * данные полученные от сокет сервера
+ *
+ * @param {IParams} params
+ * @param message any;
+ * @param emit (input: any) => void;
+ */
+export const socketCallback = (params: IParams) => {
+  const { message } = params;
+  const { data } = message;
+
+  checkContract({
+    contract: soketServerMsgContract,
+    data,
+    direction: DIRECTION.B_F,
+  });
+
+  params.emit({
+    type: socketSupportClearBeforeRes.toString(),
+  });
+
+  params.emit({
+    type: chatListSupportResMsgFromSocket.toString(),
+    payload: data,
+  });
+};
 ```

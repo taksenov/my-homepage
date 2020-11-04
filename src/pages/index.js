@@ -33,7 +33,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        <Link to={'docs/mdx'}>В этом разделе</Link> я пишу конспекты по прочитанным мной книгам. 
+        <Link to={'docs/books'}>В этом разделе</Link> обобщаю информацию по прочитанным мной книгам. 
         Как правило я стараюсь уделять внимание фундаментальным и академическим 
         трудам из области информатики.
       </>
@@ -79,7 +79,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/doc1')}>
+              to={useBaseUrl('blog')}>
               Поехали!
             </Link>
           </div>

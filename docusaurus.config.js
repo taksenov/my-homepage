@@ -17,7 +17,7 @@ module.exports = {
       links: [
         { to: 'docs/doc1', label: 'Наработки', position: 'left' },
         { to: 'blog', label: 'Блог', position: 'left' },
-        { to: 'docs/mdx', label: 'Книги', position: 'left' },
+        { to: 'docs/books', label: 'Книги', position: 'left' },
         {
           href: 'https://github.com/taksenov',
           label: 'GitHub',
@@ -41,7 +41,7 @@ module.exports = {
             },
             {
               label: 'Книги',
-              to: 'docs/mdx',
+              to: 'docs/books',
             },
           ],
         },

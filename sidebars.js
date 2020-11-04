@@ -8,6 +8,6 @@
 module.exports = {
   someSidebar: {
     "Наработки": ['doc1', 'doc2', 'doc3'],
-    "Книги": ['mdx'],
+    "Книги": ['books'],
   },
 };
