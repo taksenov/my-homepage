@@ -12,7 +12,7 @@ tags:
     programming,
     FP,
     pipe,
-    functiuonal programming,
+    functional programming,
     javascript,
     typescript,
   ]
