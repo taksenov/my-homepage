@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[17],{151:function(e){e.exports=JSON.parse('{"allTagsPath":"/my-homepage/blog/tags","slug":"elixir","name":"elixir","count":1,"permalink":"/my-homepage/blog/tags/elixir"}')}}]);
