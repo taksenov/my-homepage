@@ -1,5 +1,5 @@
 ---
-id: libOrNotToLib
+slug: libOrNotToLib
 title: Отсуствие дилеммы использования внешних библиотек npm, когда ты мидл+
 author: Timofey Aksenov
 author_title: Front End Developer

@@ -1,5 +1,5 @@
 ---
-id: whenFPIsAwesome
+slug: whenFPIsAwesome
 title: Когда функциональное программирование это хорошо, правильно и нужно
 author: Timofey Aksenov
 author_title: Front End Developer

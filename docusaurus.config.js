@@ -14,7 +14,7 @@ module.exports = {
         alt: 'Logo',
         src: 'img/logo.svg',
       },
-      links: [
+      items: [
         { to: 'docs/doc1', label: 'Наработки', position: 'left' },
         { to: 'blog', label: 'Блог', position: 'left' },
         { to: 'docs/books', label: 'Книги', position: 'left' },

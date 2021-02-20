@@ -1,5 +1,5 @@
 ---
-id: goodbyeCleanCode
+slug: goodbyeCleanCode
 title: Прощай чистый код!
 author: Timofey Aksenov
 author_title: Front End Developer
@@ -13,7 +13,7 @@ tags: [DRY, Dan Abramov, programming, нарушители, у некоторы�
 **Код для привлечения внимания**
 
 ```js
-let {top, bottom, left, right} = Directions;
+let { top, bottom, left, right } = Directions;
 
 function createHandle(directions) {
   // 20 lines of code
@@ -31,10 +31,7 @@ let fourSides = [
   createHandle([right]),
   createHandle([bottom]),
 ];
-let twoSides = [
-  createHandle([left]),
-  createHandle([right]),
-];
+let twoSides = [createHandle([left]), createHandle([right])];
 
 function createBox(shape, handles) {
   // 20 lines of code

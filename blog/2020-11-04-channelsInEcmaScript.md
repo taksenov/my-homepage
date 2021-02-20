@@ -1,5 +1,5 @@
 ---
-id: channelsInEcmaScript
+slug: channelsInEcmaScript
 title: Каналы в JS - это когда "тебе" не только кнопочки "рисовать"
 author: Timofey Aksenov
 author_title: Front End Developer
