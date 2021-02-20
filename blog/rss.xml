@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Аксенов Тимофей Blog</title>
+        <link>https://taksenov.github.io/blog</link>
+        <description>Аксенов Тимофей Blog</description>
+        <lastBuildDate>Sat, 20 Feb 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Отсуствие дилеммы использования внешних библиотек npm, когда ты мидл+]]></title>
+            <link>https://taksenov.github.io/my-homepage/blog/libOrNotToLib</link>
+            <guid>libOrNotToLib</guid>
+            <pubDate>Sat, 20 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Когда нужно быстро реализовать функциональность, чтобы проверить гипотезу, сдать задачу во время и еще по тысяче различных причин, то часто, очень часто... ладно постоянно я ищу готовую библиотеку на сайте npm. Так было и в этот раз]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Каналы в JS - это когда "тебе" не только кнопочки "рисовать"]]></title>
+            <link>https://taksenov.github.io/my-homepage/blog/channelsInEcmaScript</link>
+            <guid>channelsInEcmaScript</guid>
+            <pubDate>Wed, 04 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Работал я как-то свою работу на работе]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Когда функциональное программирование это хорошо, правильно и нужно]]></title>
+            <link>https://taksenov.github.io/my-homepage/blog/whenFPIsAwesome</link>
+            <guid>whenFPIsAwesome</guid>
+            <pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Совсем недавно я закончил писать код очень большого модуля со складским учетом готовой продукции.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Непростой выбор для простого решения]]></title>
+            <link>https://taksenov.github.io/my-homepage/blog/hardSimple</link>
+            <guid>hardSimple</guid>
+            <pubDate>Wed, 26 Feb 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Изучаю постепенно основы-основы в информатике. И сразу же натыкаюсь на Алгоритм Евклида wiki.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Прощай чистый код!]]></title>
+            <link>https://taksenov.github.io/my-homepage/blog/goodbyeCleanCode</link>
+            <guid>goodbyeCleanCode</guid>
+            <pubDate>Mon, 24 Feb 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Ден Абрамов в своем блоге опубликовал крайне интересную статью о том, когда и почему мы нарушали, нарушаем и будем нарушать принцип DRY.]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://taksenov.github.io/blog</id>
+    <title>Аксенов Тимофей Blog</title>
+    <updated>2021-02-20T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://taksenov.github.io/blog"/>
+    <subtitle>Аксенов Тимофей Blog</subtitle>
+    <icon>https://taksenov.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Отсуствие дилеммы использования внешних библиотек npm, когда ты мидл+]]></title>
+        <id>libOrNotToLib</id>
+        <link href="https://taksenov.github.io/my-homepage/blog/libOrNotToLib"/>
+        <updated>2021-02-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Когда нужно быстро реализовать функциональность, чтобы проверить гипотезу, сдать задачу во время и еще по тысяче различных причин, то часто, очень часто... ладно постоянно я ищу готовую библиотеку на сайте npm. Так было и в этот раз]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Каналы в JS - это когда "тебе" не только кнопочки "рисовать"]]></title>
+        <id>channelsInEcmaScript</id>
+        <link href="https://taksenov.github.io/my-homepage/blog/channelsInEcmaScript"/>
+        <updated>2020-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Работал я как-то свою работу на работе]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Когда функциональное программирование это хорошо, правильно и нужно]]></title>
+        <id>whenFPIsAwesome</id>
+        <link href="https://taksenov.github.io/my-homepage/blog/whenFPIsAwesome"/>
+        <updated>2020-06-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Совсем недавно я закончил писать код очень большого модуля со складским учетом готовой продукции.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Непростой выбор для простого решения]]></title>
+        <id>hardSimple</id>
+        <link href="https://taksenov.github.io/my-homepage/blog/hardSimple"/>
+        <updated>2020-02-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Изучаю постепенно основы-основы в информатике. И сразу же натыкаюсь на Алгоритм Евклида wiki.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Прощай чистый код!]]></title>
+        <id>goodbyeCleanCode</id>
+        <link href="https://taksenov.github.io/my-homepage/blog/goodbyeCleanCode"/>
+        <updated>2020-02-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ден Абрамов в своем блоге опубликовал крайне интересную статью о том, когда и почему мы нарушали, нарушаем и будем нарушать принцип DRY.]]></summary>
+    </entry>
+</feed>
