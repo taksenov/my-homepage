@@ -1,7 +1,6 @@
 module.exports = {
   title: 'Аксенов Тимофей',
-  tagline:
-    '<irony>Заслуженный фронтенд разработчик России, с макбуком и бородой</irony>',
+  tagline: '<irony>Заслуженный фронтенд разработчик ..., с макбуком и бородой</irony>',
   url: 'https://taksenov.github.io/',
   baseUrl: '/my-homepage/',
   favicon: 'img/favicon.ico',
